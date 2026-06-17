@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OXHERB</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #183024;
+      background: #f7f4ed;
+    }
+
+    .hero {
+      height: 720px;
+      background-image: linear-gradient(
+        rgba(255,255,255,0.05),
+        rgba(0,0,0,0.15)
+      ), url("hero.png");
+      background-size: cover;
+      background-position: center top;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    .hero-content {
+      margin-top: 180px;
+    }
+
+    .logo {
+      position: absolute;
+      top: 35px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 52px;
+      font-weight: bold;
+      letter-spacing: 4px;
+      color: #2f6f35;
+      text-shadow: 0 3px 12px rgba(255,255,255,0.8);
+    }
+
+    .logo span {
+      color: #ef8fa0;
+    }
+
+    .hero h1 {
+      font-size: 58px;
+      line-height: 1.1;
+      letter-spacing: 4px;
+      margin: 0;
+      text-shadow: 0 4px 14px rgba(0,0,0,0.3);
+    }
+
+    .hero h1 span {
+      color: #2f7d35;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-top: 18px;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+
+    .discover {
+      display: inline-block;
+      margin-top: 35px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+      letter-spacing: 2px;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.35);
+    }
+
+    .wellness {
+      display: flex;
+      min-height: 380px;
+    }
+
+    .card {
+      width: 50%;
+      padding: 90px 70px;
+      box-sizing: border-box;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .women {
+      background: #f3d5d8;
+    }
+
+    .men {
+      background: #c8d1bf;
+    }
+
+    .card h2 {
+      font-size: 40px;
+      letter-spacing: 3px;
+      line-height: 1.2;
+      margin: 0 0 30px;
+    }
+
+    .card p {
+      font-size: 17px;
+      line-height: 1.6;
+      max-width: 300px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 15px 28px;
+      border: 1px solid #183024;
+      color: #183024;
+      text-decoration: none;
+      letter-spacing: 1.5px;
+      font-size: 14px;
+    }
+
+    .button:hover {
+      background: #183024;
+      color: white;
+    }
+
+    .symbol {
+      position: absolute;
+      right: 60px;
+      bottom: 30px;
+      font-size: 210px;
+      opacity: 0.18;
+      font-weight: bold;
+    }
+
+    .features {
+      display: flex;
+      justify-content: space-around;
+      padding: 60px 40px;
+      background: #fffaf3;
+      text-align: center;
+    }
+
+    .feature {
+      width: 22%;
+      border-right: 1px solid #ddd5ca;
+      padding: 0 25px;
+      box-sizing: border-box;
+    }
+
+    .feature:last-child {
+      border-right: none;
+    }
+
+    .feature h3 {
+      font-size: 18px;
+      letter-spacing: 2px;
+    }
+
+    .feature p {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    footer {
+      background: #203526;
+      color: white;
+      text-align: center;
+      padding: 35px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="hero">
+    <div class="logo"><span>O</span>XHERB</div>
+
+    <div class="hero-content">
+      <h1>
+        NATURAL<br>
+        BALANCE<br>
+        BETTER <span>YOU.</span>
+      </h1>
+
+      <p>Science of Nature. Power of You.</p>
+
+      <a class="discover" href="#wellness">DISCOVER</a>
+    </div>
+  </section>
+
+  <section class="wellness" id="wellness">
+    <div class="card women">
+      <h2>WOMEN’S<br>WELLNESS</h2>
+      <p>Natural support for every stage of womanhood.</p>
+
+      <a class="button" href="oxherb-test-woman-index.html">
+        EXPLORE WOMEN →
+      </a>
+
+      <div class="symbol">♀</div>
+    </div>
+
+    <div class="card men">
+      <h2>MEN’S<br>WELLNESS</h2>
+      <p>Performance, vitality and balance for men.</p>
+
+      <a class="button" href="oxherb-test-man-index.html">
+        EXPLORE MEN →
+      </a>
+
+      <div class="symbol">♂</div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="feature">
+      <h3>NATURAL INGREDIENTS</h3>
+      <p>Sourced from nature. Backed by science.</p>
+    </div>
+
+    <div class="feature">
+      <h3>CLINICALLY STUDIED</h3>
+      <p>Formulas developed with clinical research.</p>
+    </div>
+
+    <div class="feature">
+      <h3>PREMIUM QUALITY</h3>
+      <p>Highest standards from start to finish.</p>
+    </div>
+
+    <div class="feature">
+      <h3>SUSTAINABLE PRACTICES</h3>
+      <p>Good for you. Good for the planet.</p>
+    </div>
+  </section>
+
+  <footer>
+    © 2024 OXHERB. All rights reserved.
+  </footer>
+
+</body>
+</html>
