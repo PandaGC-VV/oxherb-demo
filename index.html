@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>OXHERB</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     body {
@@ -14,8 +15,8 @@
     .hero {
       height: 720px;
       background-image: linear-gradient(
-        rgba(255,255,255,0.05),
-        rgba(0,0,0,0.15)
+        rgba(255,255,255,0.08),
+        rgba(0,0,0,0.18)
       ), url("hero.png");
       background-size: cover;
       background-position: center top;
@@ -24,10 +25,7 @@
       justify-content: center;
       text-align: center;
       color: white;
-    }
-
-    .hero-content {
-      margin-top: 180px;
+      position: relative;
     }
 
     .logo {
@@ -37,13 +35,17 @@
       transform: translateX(-50%);
       font-size: 52px;
       font-weight: bold;
-      letter-spacing: 4px;
+      letter-spacing: 5px;
       color: #2f6f35;
-      text-shadow: 0 3px 12px rgba(255,255,255,0.8);
+      text-shadow: 0 3px 12px rgba(255,255,255,0.85);
     }
 
     .logo span {
       color: #ef8fa0;
+    }
+
+    .hero-content {
+      margin-top: 180px;
     }
 
     .hero h1 {
@@ -51,17 +53,17 @@
       line-height: 1.1;
       letter-spacing: 4px;
       margin: 0;
-      text-shadow: 0 4px 14px rgba(0,0,0,0.3);
+      text-shadow: 0 4px 14px rgba(0,0,0,0.35);
     }
 
     .hero h1 span {
-      color: #2f7d35;
+      color: #36a34a;
     }
 
     .hero p {
       font-size: 18px;
       margin-top: 18px;
-      text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      text-shadow: 0 2px 8px rgba(0,0,0,0.35);
     }
 
     .discover {
@@ -77,7 +79,7 @@
 
     .wellness {
       display: flex;
-      min-height: 380px;
+      min-height: 420px;
     }
 
     .card {
@@ -97,27 +99,35 @@
     }
 
     .card h2 {
-      font-size: 40px;
+      font-size: 48px;
       letter-spacing: 3px;
-      line-height: 1.2;
+      line-height: 1.15;
       margin: 0 0 30px;
+      color: #183024;
+      position: relative;
+      z-index: 2;
     }
 
     .card p {
-      font-size: 17px;
-      line-height: 1.6;
-      max-width: 300px;
+      font-size: 18px;
+      line-height: 1.7;
+      max-width: 320px;
+      position: relative;
+      z-index: 2;
     }
 
     .button {
       display: inline-block;
-      margin-top: 28px;
-      padding: 15px 28px;
+      margin-top: 30px;
+      padding: 15px 30px;
       border: 1px solid #183024;
       color: #183024;
       text-decoration: none;
-      letter-spacing: 1.5px;
+      letter-spacing: 2px;
       font-size: 14px;
+      transition: 0.3s;
+      position: relative;
+      z-index: 2;
     }
 
     .button:hover {
@@ -125,13 +135,18 @@
       color: white;
     }
 
-    .symbol {
+    .brand-symbol {
       position: absolute;
-      right: 60px;
-      bottom: 30px;
-      font-size: 210px;
-      opacity: 0.18;
-      font-weight: bold;
+      right: 40px;
+      bottom: 25px;
+      width: 280px;
+      opacity: 0.62;
+      z-index: 1;
+    }
+
+    .brand-symbol img {
+      width: 100%;
+      display: block;
     }
 
     .features {
@@ -170,6 +185,126 @@
       padding: 35px;
       font-size: 14px;
     }
+
+    /* Mobile */
+
+    @media (max-width: 768px) {
+      .hero {
+        height: 610px;
+        background-position: center top;
+      }
+
+      .logo {
+        top: 32px;
+        font-size: 32px;
+        letter-spacing: 4px;
+      }
+
+      .hero-content {
+        margin-top: 180px;
+        padding: 0 20px;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+        letter-spacing: 3px;
+      }
+
+      .hero p {
+        font-size: 14px;
+      }
+
+      .discover {
+        font-size: 15px;
+        margin-top: 28px;
+      }
+
+      .wellness {
+        display: flex;
+        min-height: 360px;
+      }
+
+      .card {
+        width: 50%;
+        padding: 38px 24px 42px;
+        min-height: 360px;
+      }
+
+      .card h2 {
+        font-size: 28px;
+        letter-spacing: 2px;
+        line-height: 1.2;
+      }
+
+      .card p {
+        font-size: 13px;
+        line-height: 1.6;
+        max-width: 160px;
+      }
+
+      .button {
+        margin-top: 20px;
+        padding: 11px 14px;
+        font-size: 10px;
+        letter-spacing: 1.5px;
+      }
+
+      .brand-symbol {
+        width: 145px;
+        right: -8px;
+        bottom: 18px;
+        opacity: 0.55;
+      }
+
+      .features {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 28px 0;
+        padding: 45px 22px;
+      }
+
+      .feature {
+        width: 100%;
+        border-right: none;
+        padding: 0 14px;
+      }
+
+      .feature h3 {
+        font-size: 14px;
+      }
+
+      .feature p {
+        font-size: 12px;
+      }
+
+      footer {
+        padding: 28px 20px;
+        font-size: 12px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        height: 560px;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .card {
+        padding: 34px 18px 38px;
+      }
+
+      .card h2 {
+        font-size: 24px;
+      }
+
+      .brand-symbol {
+        width: 125px;
+        right: -12px;
+      }
+    }
   </style>
 </head>
 
@@ -192,27 +327,35 @@
   </section>
 
   <section class="wellness" id="wellness">
+
     <div class="card women">
       <h2>WOMEN’S<br>WELLNESS</h2>
+
       <p>Natural support for every stage of womanhood.</p>
 
       <a class="button" href="oxherb-test-woman-index.html">
         EXPLORE WOMEN →
       </a>
 
-      <div class="symbol">♀</div>
+      <div class="brand-symbol">
+        <img src="women-symbol.png" alt="Women's wellness symbol">
+      </div>
     </div>
 
     <div class="card men">
       <h2>MEN’S<br>WELLNESS</h2>
+
       <p>Performance, vitality and balance for men.</p>
 
       <a class="button" href="oxherb-test-man-index.html">
         EXPLORE MEN →
       </a>
 
-      <div class="symbol">♂</div>
+      <div class="brand-symbol">
+        <img src="men-symbol.png" alt="Men's wellness symbol">
+      </div>
     </div>
+
   </section>
 
   <section class="features">
